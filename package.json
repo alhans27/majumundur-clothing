@@ -1,0 +1,22 @@
+{
+  "name": "majumundur-clothing",
+  "version": "1.0.0",
+  "description": "Application for buying and selling clothes from the Maju Mundur brand.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alhans27/majumundur-clothing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alhans27/majumundur-clothing/issues"
+  },
+  "homepage": "https://github.com/alhans27/majumundur-clothing#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
