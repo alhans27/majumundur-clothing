@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
+const User = require("./users");
 
 const productSchema = new Schema({
     name: {
@@ -23,7 +24,7 @@ const productSchema = new Schema({
     },
     merchantId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Users",
+        ref: User,
     },
     meta: {
         category: {
@@ -41,7 +42,7 @@ const productSchema = new Schema({
             {
                 reviewerId: {
                     type: mongoose.Schema.Types.ObjectId,
-                    ref: "Users",
+                    ref: User,
                 },
                 comment: String,
                 rating: Number,
@@ -51,6 +52,6 @@ const productSchema = new Schema({
     },
 }, {timestamps: true});
 
-const Products = mongoose.model('Products', productSchema);
+const Product = mongoose.model('Product', productSchema);
 
-module.exports = Products;
+module.exports = Product;

@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const productRouter = require("./routers/product-router");
+const userRouter = require("./routers/user-router");
 
 const app = express();
 const host = process.env.SERVER_HOST;
@@ -32,6 +33,7 @@ app.get("/api/", (req, res) => {
 });
 
 app.use("/api/", productRouter);
+app.use("/api/", userRouter);
 
 // Run Server on port 3000
 app.listen(port, () => {
